@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>M'Bros</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Sacramento&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <div class="overlay">
+    <div class="background">
+
+    </div>
+  </div>
+  <div class="fixed">
+    <nav class="navbar">
+      <ul class="navbar-nav">
+        <li class=" button"><h4>M'Bros</h4></li>
+        <li class="navbar-item ">Contact</></li>
+        <li class="navbar-item"> <a href="#achievements">Achievement</a></li>
+        <li class="navbar-item"><a href="#here">Members</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="top-container">
+    <h1>M'Bros</h1>
+    <h2 class="intro">A pioneer team in business case solving. Currently holding unbeatable records.</h2>
+  </div>
+  <div class="description">
+    <h2>Description</h2>
+    <p class="brief">Currently enrolled at North Sourh University. One of the leading and brightest in the not only in the University but nationwide. We are here because of long journey from trail and error. Success is not a mere luck but it's all
+      about hardwork.</p>
+  </div>
+  <hr>
+  <div class="middle-container" id="here"  >
+    <h2 style="padding-top:30px;">Team Members</h2>
+
+    <div class="profile">
+
+      <a href="F:\Web Development\CSS- My Site\Index.html"><img class="profile-picture" src="images\mahadi.png" alt="Image of mahadi" height="150px" width="150px"></a>
+      <div class="info">
+        <h3 class="">Md. Mahadi Hasan</h3>
+        <p class="">Currently playing roll as the leader of the team. But main contribution as an analysist with case debugging and more.</p>
+      </div>
+
+    </div>
+
+    <div class="profile">
+
+      <img class="profile-picture" src="images\mahin.png" alt="Image of mahin" height="150px" width="150px">
+      <div class="info">
+        <h3 class="">Mahin Afroz Bhuiyan</h3>
+        <p class="">Main case cracker of the team. Best at doing ideation and field survey. Also a national champion debaiter.</p>
+      </div>
+
+    </div>
+    <div class="profile">
+
+      <img class="profile-picture" src="images\tamim.png" alt="Image of tamim" height="150px" width="150px">
+      <div class="info">
+        <h3 class="">Mustakim Islam Tamim</h3>
+        <p class="">The guy with the innovative ideas. Also working as the visualizer of plan to interpret in the slides.</p>
+      </div>
+
+    </div>
+  </div>
+  <hr>
+  <div class="slideshow-container grey" id="achievements">
+
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="https://images4.alphacoders.com/936/thumb-1920-936378.jpg" style="width:100%">
+      <div class="text">Brandwitz</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="https://i.pinimg.com/originals/86/ff/b8/86ffb87572d657f335cd7cd828c70de3.jpg" style="width:100%">
+      <div class="text">HSBC IBA 2016</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="https://i.redd.it/v2cmfx8rbdv11.jpg" style="width:100%">
+      <div class="text">Biz Maestros</div>
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  </div>
+  <br>
+
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+  <hr>
+
+  <div class="bottom-container">
+      
+  </div>
+
+  <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+    }
+  </script>
+
+
+
+
+</body>
+
+</html>
